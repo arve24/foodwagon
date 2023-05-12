@@ -1,0 +1,185 @@
+/* --------------------------------- Popular -------------------------------- */
+
+.popular {
+  padding: clamp(2.5rem, 1.759rem + 3.7vw, 5rem) 0
+    clamp(2.5rem, 1.852rem + 3.24vw, 4.688rem) 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1.875rem, 0.801rem + 5.37vw, 5.5rem);
+  }
+
+  &__title {
+    @media (max-width: 1770px) {
+      align-self: start;
+
+      padding-left: 20px;
+    }
+
+    @media (max-width: 575px) {
+      align-self: center;
+
+      padding-left: 0;
+    }
+  }
+}
+
+.popular .popular-slider {
+  width: 100%;
+  overflow: visible;
+
+  @media (min-width: 576px) {
+    $slide: ".popular-slide";
+
+    .swiper-slide {
+      opacity: 0;
+      visibility: hidden;
+
+      transition: 200ms all;
+
+      &-active {
+        opacity: 1;
+        visibility: visible;
+        @for $i from 1 through 4 {
+          & + #{$slide} {
+            opacity: 1;
+            visibility: visible;
+          }
+          $slide: "#{$slide} + .swiper-slide";
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    padding: 0 clamp(1.875rem, -5.156rem + 35.16vw, 7.5rem);
+  }
+
+  &__wrapper {
+    align-items: center;
+  }
+
+  &__controls {
+    position: absolute;
+    top: 17%;
+    right: 50%;
+    z-index: 10;
+
+    transform: translate(50%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: clamp(81.25rem, 28.75rem + 70vw, 107.5rem);
+    min-height: 150px;
+
+    @media (max-width: 1770px) {
+      top: -150px;
+      right: 100px;
+
+      width: 200px;
+
+      padding-right: 30px;
+    }
+
+    @media (max-width: 767px) {
+      top: -140px;
+    }
+
+    @media (max-width: 575px) {
+      display: none;
+    }
+  }
+}
+
+.popular .popular-slide {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      border-radius: 16px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.375rem;
+    line-height: 1.2;
+
+    margin-top: 16px;
+  }
+
+  &__location {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+
+    font-weight: 400;
+    font-size: 1.375rem;
+    line-height: 1.2;
+    color: var(--primary-color);
+
+    margin-top: 8px;
+
+    svg {
+      width: 14px;
+      height: 22px;
+    }
+  }
+
+  &__price {
+    font-size: 1.375rem;
+    line-height: 1.2;
+
+    margin-top: 5px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 48px;
+    margin-top: 15px;
+
+    color: #fff;
+
+    width: 100%;
+
+    background: var(--secondary-color);
+    box-shadow: 0px 5px 10px rgba(253, 114, 92, 0.22),
+      0px 20px 40px rgba(250, 99, 35, 0.24);
+
+    border-radius: 8px;
+    border: 1px solid var(--secondary-color);
+
+    transition: 0.5s all;
+
+    cursor: pointer;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: #fff;
+        color: var(--secondary-color);
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+/* --------------------------------- /Popular -------------------------------- */

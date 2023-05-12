@@ -1,0 +1,31 @@
+.slider-button {
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--primary-color);
+
+  border: 1px solid var(--primary-color);
+  border-radius: 92px;
+
+  box-shadow: 0px 5px 8px rgba(222, 151, 0, 0.24),
+    0px 14px 32px rgba(255, 178, 14, 0.29);
+  cursor: pointer;
+
+  svg {
+    width: 20px;
+    aspect-ratio: 0.6;
+  }
+
+  &:last-child {
+    transform: rotate(180deg);
+  }
+}
+
+.swiper-button-disabled {
+  transition: 0.5s opacity;
+  opacity: 0.7;
+}

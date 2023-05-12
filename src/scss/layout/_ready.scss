@@ -1,0 +1,67 @@
+/* ---------------------------------- Ready --------------------------------- */
+
+.ready {
+  padding: clamp(2.5rem, 1.556rem + 4.72vw, 5.688rem) 0
+    clamp(1.875rem, 1.042rem + 4.17vw, 4.688rem) 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(251, 205, 38, 1) 0%,
+    rgba(255, 182, 6, 1) 100%
+  );
+
+  background: url("../img/ready-bg.jpeg") center center/cover no-repeat;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2.5rem, 2.093rem + 2.04vw, 3.875rem);
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: clamp(2.5rem, 2.185rem + 1.57vw, 3.563rem);
+    line-height: 0.975;
+    text-align: center;
+    color: #ffffff;
+
+    max-width: 728px;
+    margin: 0 auto;
+  }
+
+  &__button {
+    width: 233px;
+    height: 60px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    margin: 0 auto;
+
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #ffffff;
+
+    cursor: pointer;
+
+    background: linear-gradient(93.41deg, #f17228 -5.63%, #f15e28 100.8%);
+
+    box-shadow: 0px 5px 8px rgba(222, 151, 0, 0.24),
+      0px 14px 32px rgba(255, 178, 14, 0.29);
+    border-radius: 8px;
+
+    @include button-hover;
+
+    svg {
+      width: 10px;
+      height: 16px;
+
+      transform: rotate(180deg);
+    }
+  }
+}
+
+/* ---------------------------------- /Ready --------------------------------- */

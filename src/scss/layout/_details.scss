@@ -1,0 +1,146 @@
+/* --------------------------------- Details -------------------------------- */
+
+.details {
+  padding: clamp(2.5rem, 0.741rem + 8.8vw, 8.438rem) 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(2.5rem, 1.759rem + 3.7vw, 5rem);
+  }
+}
+
+.details-card {
+  width: 100%;
+  min-height: 512px;
+
+  background-color: #fff;
+
+  display: flex;
+
+  filter: drop-shadow(0px 14px 15px rgba(124, 124, 124, 0.06))
+    drop-shadow(0px 27px 82px rgba(124, 124, 124, 0.28));
+
+  border-radius: 16px;
+
+  @media (max-width: 1199px) {
+    flex-direction: column;
+  }
+
+  &__img {
+    width: 65%;
+    min-height: 100%;
+
+    @media (max-width: 1199px) {
+      width: 100%;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      border-radius: 16px 0 0 16px;
+
+      @media (max-width: 1200px) {
+        border-radius: 16px 16px 0 0;
+      }
+    }
+
+    &_order-2 {
+      @media (min-width: 1199px) {
+        order: 2;
+
+        img {
+          border-radius: 0 16px 16px 0;
+        }
+      }
+    }
+  }
+
+  &__main {
+    width: 35%;
+
+    padding: clamp(1.25rem, 0.583rem + 3.33vw, 3.5rem);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+
+    @media (max-width: 1199px) {
+      width: 100%;
+      order: 2;
+    }
+  }
+
+  &__text {
+    padding: clamp(0.938rem, 0.363rem + 2.87vw, 2.875rem) 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (max-width: 1199px) and (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  &__subtitle {
+    font-size: clamp(2.375rem, 2.19rem + 0.93vw, 3rem);
+    line-height: 1.12;
+
+    strong {
+      color: var(--primary-color);
+    }
+  }
+
+  &__desc {
+    line-height: 1.4;
+  }
+
+  &__button {
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    background: var(--primary-linear-gradient);
+
+    box-shadow: 0px 5px 8px rgba(222, 151, 0, 0.24),
+      0px 14px 32px rgba(255, 178, 14, 0.29);
+
+    border-radius: 8px;
+
+    @include button-hover;
+
+    @media (max-width: 425px) {
+      padding: 21px 30px;
+
+      font-size: 16px;
+    }
+
+    svg {
+      width: 10px;
+      height: 16px;
+
+      transform: rotate(180deg);
+    }
+  }
+}
+
+/* --------------------------------- /Details -------------------------------- */

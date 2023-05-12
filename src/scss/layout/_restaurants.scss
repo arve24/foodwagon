@@ -1,0 +1,236 @@
+/* ------------------------------- Restaurants ------------------------------ */
+
+.restaurants {
+  padding-bottom: clamp(2.5rem, 1.759rem + 3.7vw, 5rem);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__wrapper {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 16px;
+    row-gap: 64px;
+
+    margin-top: clamp(1.875rem, 0.801rem + 5.37vw, 5.5rem);
+
+    @media (max-width: 1250px) {
+      grid-template-columns: repeat(6, 1fr);
+      justify-content: center;
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 575px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__card {
+    grid-column: span 2;
+
+    @media (max-width: 1250px) and (min-width: 768px) {
+      &:last-child:nth-child(3n - 1) {
+        grid-column-end: -2;
+      }
+
+      &:nth-last-child(2):nth-child(3n + 1) {
+        grid-column-end: 4;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 21px 48px;
+    margin-top: clamp(4rem, 3.556rem + 2.22vw, 5.5rem);
+
+    width: 178px;
+    min-height: 60px;
+
+    background: var(--primary-linear-gradient);
+    box-shadow: var(--primary-box-shadow);
+
+    border-radius: 14px;
+
+    color: #ffffff;
+    word-break: keep-all;
+
+    cursor: pointer;
+
+    @include button-hover;
+
+    svg {
+      width: 9px;
+      height: 14px;
+
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.restaurants-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__top-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    position: absolute;
+    top: 24px;
+    left: 24px;
+
+    @media (max-width: 991px) {
+      transform: scale(0.8);
+      top: 10px;
+      left: -10px;
+    }
+  }
+
+  &__discount-badge,
+  &__time-badge {
+    min-height: 42px;
+    padding: 8px 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 8px;
+
+    font-size: 1.375rem;
+    line-height: 1.2;
+    color: #ffffff;
+    word-break: keep-all;
+
+    svg {
+      width: 18px;
+      height: 22px;
+    }
+  }
+
+  &__discount-badge {
+    width: 135px;
+
+    background: var(--secondary-color);
+  }
+
+  &__time-badge {
+    width: 100px;
+
+    background: var(--primary-color);
+  }
+
+  &__img {
+    width: 100%;
+
+    aspect-ratio: 1.2;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      border-radius: 16px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    margin-top: 24px;
+  }
+
+  &__logo {
+    width: 64px;
+    height: 64px;
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__subtitle {
+    font-size: 1.375rem;
+    line-height: 1.2;
+  }
+
+  &__rate {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-weight: 400;
+    font-size: 1.375rem;
+    line-height: 1.2;
+    color: var(--primary-color);
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__open-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 8px 16px;
+    margin-top: 32px;
+
+    border-radius: 16px;
+
+    min-height: 42px;
+
+    &_red {
+      width: 196px;
+
+      font-size: 1.375rem;
+      line-height: 1.2;
+      color: var(--secondary-color);
+
+      background: rgba(241, 114, 40, 0.2);
+
+      @media (max-width: 575px) {
+        width: 100%;
+      }
+    }
+
+    &_green {
+      width: 132px;
+
+      font-size: 1.375rem;
+      line-height: 1.2;
+      color: #79b93c;
+
+      background: rgba(121, 185, 60, 0.2);
+
+      @media (max-width: 575px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* ------------------------------- /Restaurants ------------------------------ */

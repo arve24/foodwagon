@@ -1,0 +1,32 @@
+/* ---------------------------------- Utils --------------------------------- */
+@import "utils/mixins";
+@import "utils/variables";
+/* ---------------------------------- /Utils --------------------------------- */
+
+/* ---------------------------------- Base ---------------------------------- */
+@import "base/reset";
+@import "base/fonts";
+@import "base/base";
+/* ---------------------------------- /Base ---------------------------------- */
+
+/* --------------------------------- Layout --------------------------------- */
+@import "layout/header";
+
+@import "layout/hero";
+@import "layout/deals";
+@import "layout/how";
+@import "layout/popular";
+@import "layout/restaurants";
+@import "layout/search";
+@import "layout/features";
+@import "layout/details";
+@import "layout/ready";
+
+@import "layout/footer";
+/* --------------------------------- /Layout --------------------------------- */
+
+/* ------------------------------- Components ------------------------------- */
+@import "components/title";
+@import "components/text";
+@import "components/slider-button";
+/* ------------------------------- /Components ------------------------------- */
