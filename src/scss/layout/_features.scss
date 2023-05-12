@@ -134,7 +134,7 @@
   align-items: start;
   gap: clamp(1.875rem, -14.841rem + 26.96vw, 8.75rem);
 
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     flex-direction: column;
     align-items: center;
   }
@@ -151,11 +151,11 @@
       max-width: 600px;
     }
 
-    @media (max-width: 1100px) and (min-width: 768px) {
+    @media (max-width: 1100px) and (min-width: 991px) {
       width: 50%;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       order: 2;
     }
   }
@@ -168,7 +168,7 @@
 
     padding-top: 55px;
 
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       order: 1;
     }
   }
