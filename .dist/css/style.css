@@ -1854,6 +1854,10 @@ section {
     align-items: center;
   }
 
+  .features-app picture {
+    order: 2;
+  }
+
   .features-app__img {
     order: 2;
   }
